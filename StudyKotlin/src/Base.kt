@@ -628,7 +628,7 @@ fun main() {
     с помощью операторов in и !in:
     */
 
-    val numbers = arrayOf(1, 2, 3, 4, 5)
-    println(4 in numbers)
-    println(2 !in numbers)
+//    val numbers = arrayOf(1, 2, 3, 4, 5)
+//    println(4 in numbers)
+//    println(2 !in numbers)
 }
