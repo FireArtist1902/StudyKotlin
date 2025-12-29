@@ -68,35 +68,65 @@ fun main()
     Такие функции еще называют функции-члены класса. Например, определим класс с функциями:
     */
 
-    val Tom = Person();
-    Tom.name = "Tom";
-    Tom.age = 37;
+//    val Tom = Person();
+//    Tom.name = "Tom";
+//    Tom.age = 37;
+//
+//    Tom.sayHello();
+//    Tom.go("the shop");
+//    println(Tom.personToString());
 
-    Tom.sayHello();
-    Tom.go("the shop");
-    println(Tom.personToString());
+    //  Конструкторы    //
+    /*
+    Для создания объекта необходимо вызвать конструктор класса. По умолчанию
+    компилятор создает конструктор, который не принимает параметров и который
+    мы можем использовать. Но также мы можем определять свои собственные
+    конструкторы. Классы в Kotlin могут иметь один первичный конструктор и один
+    или несколько вторичных конструкторов.
+
+    Вторичные конструкторы определяются в теле класса с помощью ключевого слова
+    constructor:
+    */
+
+//    val Tom = Person("Tom", 39);
+//    val Bob = Person("Bob", 45);
+//
+//    println("Name: ${Tom.name}, Age: ${Tom.age}")
+//    println("Name: ${Bob.name}, Age: ${Bob.age}")
 }
 
 class Person
 {
-    var name: String = "Undefined";
-    var age: Int = 0;
+    val name: String;
+    var age: Int;
 
-    fun sayHello()
+    constructor(_name: String, _age: Int)
     {
-        println("Hello, my name is $name");
-    }
-
-    fun go(location: String)
-    {
-        println("$name, goes to $location")
-    }
-
-    fun personToString(): String
-    {
-        return "Name: $name, Age: $age";
+        name = _name;
+        age = _age;
     }
 }
+
+//class Person
+//{
+//    var name: String = "Undefined";
+//    var age: Int = 0;
+//
+//    fun sayHello()
+//    {
+//        println("Hello, my name is $name");
+//    }
+//
+//    fun go(location: String)
+//    {
+//        println("$name, goes to $location")
+//    }
+//
+//    fun personToString(): String
+//    {
+//        return "Name: $name, Age: $age";
+//    }
+//}
 
 //class Person
 //{
