@@ -1,3 +1,6 @@
+import email.Message as EmailMessage
+import email.send as sendEmail
+
 fun main()
 {
     //  Классы и объекты    //
@@ -93,19 +96,91 @@ fun main()
 //
 //    println("Name: ${Tom.name}, Age: ${Tom.age}")
 //    println("Name: ${Bob.name}, Age: ${Bob.age}")
+
+//    val tom = Person("Tom", -100)
+//    val bob = Person("Bob", 45)
+//
+//    println("Name: ${tom.name}  Age: ${tom.age}")
+//    println("Name: ${bob.name}  Age: ${bob.age}")
+
+//    val myMessage = EmailMessage("Hello, World!")
+//    sendEmail(myMessage, "tom@gmail.com")
+
+//    val bob: Employee = Employee()
+//    bob.name = "Bob"
+//    bob.printName();
+
+//    val bob = Employee("Bob")
+//    bob.printName()
+
+    val bob = Employee("Bob", "JetBrains")
+    bob.printName()
+    bob.printCompany()
+
 }
 
-class Person
+open class Person(val name: String){
+    fun printName() = println(name)
+}
+
+class Employee(empName: String, val company: String): Person(empName)
 {
-    val name: String;
-    var age: Int;
-
-    constructor(_name: String, _age: Int)
-    {
-        name = _name;
-        age = _age;
-    }
+    fun printCompany() = println(company)
 }
+
+//open class Person(val name: String)
+//{
+//    fun printName() = println(name)
+//}
+//
+//class Employee(empName: String): Person(empName)
+
+//open class Person{
+//    var name: String = "None"
+//    fun printName() = println(name)
+//}
+//
+//class Employee: Person()
+
+//class Person(_name: String, _age: Int)
+//{
+//    val name: String
+//    var age: Int = 1
+//
+//    init {
+//        name = _name
+//        if(_age in 0..100) age = _age
+//    }
+//}
+
+//class Person(_name: String)
+//{
+//    val name : String = _name
+//    var age : Int = 0;
+//
+//    constructor(_name: String, _age: Int) : this(_name)
+//    {
+//        age = _age;
+//    }
+//}
+
+//class Person (_name : String, _age : Int)
+//{
+//    val name: String = _name
+//    var age : Int = _age
+//}
+
+//class Person
+//{
+//    val name: String;
+//    var age: Int;
+//
+//    constructor(_name: String, _age: Int)
+//    {
+//        name = _name;
+//        age = _age;
+//    }
+//}
 
 //class Person
 //{
